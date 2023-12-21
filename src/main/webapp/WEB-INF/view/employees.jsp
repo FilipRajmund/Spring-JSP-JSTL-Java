@@ -1,5 +1,6 @@
-
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -8,6 +9,14 @@
     </head>
     <body>
         <h1>Employees</h1>
+        <c:choose>
+        <c:when test="${randomValue % 2 == 0}"> ②
+            <p>Even</p>
+        </c:when>
+        <c:otherwise>
+            <p>Odd</p>
+        </c:otherwise>
+        </c:choose>
     </body>
 
 </html>
